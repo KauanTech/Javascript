@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificando Nacionalidade</title>
+</head>
+<body>
+    <h1>Você esta vivendo em?</h1>
+    <input type="text" name="Nacionalidade" id="Nacionalidade">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar () {
+            var nafv = "Brasil"
+            var nac = window.document.getElementById('Nacionalidade').value
+            var res = window.document.getElementById('res');
+            if (nafv == nac) {
+                res.innerText = `Você e Brasileiro!`
+            } else if (nafv !== nac) {
+                res.innerText = `Você é Estrangeiro!`
+            }
+        }
+    </script>
+</body>
+</html>
