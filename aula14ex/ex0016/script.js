@@ -1,20 +1,31 @@
-function carregar() {
-var msg = window.document.getElementById('msg')
-var img = window.document.getElementById('imagem')
-var data = new Date()
-var hora = data.getHours()
-msg.innerHTML = `Agora são ${hora} horas.`
-if (hora >= 0 && hora < 12) {
-    //BOM DIA!
-    img.src = 'aula14/fotomanha.png'
-    document.body.style.background = '#e2cd9f'
-} else if (hora >= 12 && hora <= 18) {
-    //BOA TARDE!
-    img.src = 'aula14/fototarde.png'
-    document.body.style.background = '#b9846f'
-} else {
-    //BOA NOITE!
-    img.src = 'aula14/fotonoite.png'
-    document.body.style.background = '#515154'
+function Contar() {
+    var ini = parseInt(window.document.getElementById('Inicio').value)
+    var fim = parseInt(window.document.getElementById('Fim').value)
+    var passo = parseInt(window.document.getElementById('Passo').value)
+    var res = window.document.getElementById('res')
+
+    res.innerHTML = '';
+
+    if (ini == 0 && fim == 0 &&passo == 0) {
+        res.innerHTML = 'Impossivel contar!'
+    }
+
+    else if (passo == 0) {
+        window.alert('O passo precisa ser maior que zero')
+    }
+
+    else {
+    if (ini < fim) {
+        for (ini;ini < fim;ini += passo) {
+            res.innerHTML += `${ini} \u{1F449}`
+        }
+    }
+
+    else {
+        for (ini;ini > fim;ini -= passo) {
+            res.innerHTML += `${ini} \u{1F449}`
+        }
+    }
+    res.innerHTML += `\u{1F3C1}`
 }
 }

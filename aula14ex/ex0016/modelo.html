@@ -6,16 +6,19 @@
     <title>Hora do Dia</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload="carregar()">
+<body>
         <header>
-            <h1>Hora do Dia</h1>
+            <h1>Vamos contar</h1>
         </header>
     <section>
-        <div id="msg">
-            Aqui vai aparecer a mensagem...
+        <div>
+            Inicio: <input type="number" name="Inicio" id="Inicio"><br>
+            Fim: <input type="number" name="Fim" id="Fim"><br>
+            Passo: <input type="number" name="Passo" id="Passo"><br>
+            <input type="button" value="Contar" onclick="Contar()">
         </div>
-        <div id="foto">
-            <img id="imagem" src="aula14/fotomanhã.png" alt="Foto do Dia">
+        <div id="res">
+            Resposta:
         </div>
     </section>
     <footer>@CursoemVídeo</footer>

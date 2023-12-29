@@ -17,9 +17,17 @@ section {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
 }
 
-div {
-    text-align: center;
-    padding: 5px;
+#Inicio {
+    margin-top: 16px;
+}
+
+#Fim {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+#Passo {
+    margin-bottom: 16px;
 }
 
 footer {
